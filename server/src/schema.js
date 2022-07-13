@@ -31,6 +31,4 @@ const typeDefs = gql`
     }
 `
 
-console.log(typeDefs)
-
 module.exports = typeDefs
