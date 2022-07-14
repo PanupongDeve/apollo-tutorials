@@ -4,7 +4,11 @@ const typeDefs = gql`
   type Query {
     "Query to get tracks array for the homepage grid"
     tracksForHome: [Track!]!
+    getHello: MyHello!
+    getHelloWithContext: MyHello!
   }
+
+
 
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
@@ -28,6 +32,11 @@ const typeDefs = gql`
     name: String!
     "Author's profile picture"
     photo: String
+  }
+
+  type MyHello {
+    name: String!,
+    message: String!
   }
 `;
 
