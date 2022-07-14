@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const resolvers = {
     Query: {
         // return s an array of Tracks that will be used to populate
@@ -9,6 +11,12 @@ const resolvers = {
 
             return dataSources.trackAPI.getTracksForHome();
            
+        },
+
+        tracksForHomeFetch: async () => {
+            const baseUrl = "https://odyssey-lift-off-rest-api.herokuapp.com";
+            const res = await fetch(`${baseUrl}/tracks`);
+            return res.json();
         },
 
         getHello: () => {

@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Query {
     "Query to get tracks array for the homepage grid"
     tracksForHome: [Track!]!
+    tracksForHomeFetch: [Track!]!
     getHello: MyHello!
     getHelloWithContext: MyHello!
   }
